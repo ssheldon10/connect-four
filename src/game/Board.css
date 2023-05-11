@@ -1,0 +1,115 @@
+:root {
+    --blue: #0047ab;
+}
+
+.game-container {
+    margin: auto;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+}
+
+.board {
+    display: flex;
+    box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.board-footer {
+    padding: 20px 0;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-footer * {
+    width: 30%;
+    border: 2px solid white;
+    color: white;
+}
+
+.restartButton {
+    font: inherit;
+    background: none;
+}
+
+.timer {
+    border: none;
+}
+
+.speed-options {
+    color: white;
+}
+
+.speed-options .labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+.slot {
+    width: 60px;
+    height: 60px;
+    background-color: var(--blue);
+}
+
+.slot-inner {
+    transform: translate(5px, 5px);
+    box-sizing: border-box;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border: 3px solid white;
+
+    background-color: rgb(218, 218, 218);
+}
+
+.slot-inner.red {
+    background-color: red;
+}
+
+.slot-inner.yellow {
+    background-color: #fede00;
+}
+
+.preview {
+    animation: color-shift 0.5s ease-in-out 0s infinite alternate;
+    opacity: 0.9;
+}
+
+@keyframes color-shift {
+    from {
+        /* background-color: white; */
+    }
+    to {
+        background-color: white;
+    }
+}
